@@ -23,7 +23,16 @@ const App = () => {
     ]
   }
 
-  return <Course course={course} />
+  const total = course.parts.reduce((accumulator, parts) => {
+    return accumulator + parts.exercises
+  }, 0)
+  
+  return (
+    <div>
+      <Course course={course} />
+      <p>total of {total} exercises</p>
+    </div>
+  )
 }
 
 export default App
