@@ -1,3 +1,9 @@
-const Header = ({ course }) => <h1>Half Stack application development</h1>
+const Header = ({ course }) => {
+    return (
+        <h2>
+            {course}
+        </h2>
+    )
+}
 
 export default Header
